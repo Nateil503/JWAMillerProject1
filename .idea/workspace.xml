@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="60581690-3329-4c25-b78e-439112679444" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/Test Cases/.idea/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/JWAMillerProject1.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Cucumber/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/Test Cases/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Cucumber/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Cucumber/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Test Cases/.idea/encodings.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Cucumber/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Test Cases/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Cucumber/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Test Cases/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Cucumber/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Test Cases/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Cucumber/src/main/java/com/revature/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/Test Cases/src/main/java/com/revature/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Cucumber/src/test/java/com/revature/TestMain.java" beforeDir="false" afterPath="$PROJECT_DIR$/Test Cases/src/test/java/com/revature/TestMain.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Cucumber/src/test/java/com/revature/TestRunner.java" beforeDir="false" afterPath="$PROJECT_DIR$/Test Cases/src/test/java/com/revature/TestRunner.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Cucumber/src/test/java/com/revature/pom/Demo.java" beforeDir="false" afterPath="$PROJECT_DIR$/Test Cases/src/test/java/com/revature/pom/Demo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Cucumber/src/test/java/com/revature/pom/HomePage.java" beforeDir="false" afterPath="$PROJECT_DIR$/Test Cases/src/test/java/com/revature/pom/HomePage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Cucumber/src/test/java/com/revature/pom/LoginPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/Test Cases/src/test/java/com/revature/pom/LoginPage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Cucumber/src/test/java/com/revature/pom/ParentPOM.java" beforeDir="false" afterPath="$PROJECT_DIR$/Test Cases/src/test/java/com/revature/pom/ParentPOM.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Cucumber/src/test/java/com/revature/pom/RegistrationPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/Test Cases/src/test/java/com/revature/pom/RegistrationPage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Cucumber/src/test/java/com/revature/steps/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Test Cases/src/test/java/com/revature/steps/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Cucumber/src/test/java/com/revature/steps/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Test Cases/src/test/java/com/revature/steps/.idea/modules.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Cucumber/src/test/java/com/revature/steps/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Test Cases/src/test/java/com/revature/steps/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Cucumber/src/test/java/com/revature/steps/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Test Cases/src/test/java/com/revature/steps/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Cucumber/src/test/java/com/revature/steps/CucumberHooks.java" beforeDir="false" afterPath="$PROJECT_DIR$/Test Cases/src/test/java/com/revature/steps/CucumberHooks.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Cucumber/src/test/java/com/revature/steps/RegistrationSteps.java" beforeDir="false" afterPath="$PROJECT_DIR$/Test Cases/src/test/java/com/revature/steps/RegistrationSteps.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Cucumber/src/test/java/com/revature/steps/SimpleFeatureSteps.java" beforeDir="false" afterPath="$PROJECT_DIR$/Test Cases/src/test/java/com/revature/steps/SimpleFeatureSteps.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Cucumber/src/test/resources/features/PlanetMoonAddition.feature" beforeDir="false" afterPath="$PROJECT_DIR$/Test Cases/src/test/resources/features/PlanetMoonAddition.feature" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Cucumber/src/test/resources/features/PlanetMoonRemoval.feature" beforeDir="false" afterPath="$PROJECT_DIR$/Test Cases/src/test/resources/features/PlanetMoonRemoval.feature" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Cucumber/src/test/resources/features/Registration.feature" beforeDir="false" afterPath="$PROJECT_DIR$/Test Cases/src/test/resources/features/Registration.feature" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Cucumber/src/test/resources/features/SecureAccess.feature" beforeDir="false" afterPath="$PROJECT_DIR$/Test Cases/src/test/resources/features/SecureAccess.feature" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Test Cases/Acceptance Criteria.md" beforeDir="false" afterPath="$PROJECT_DIR$/Acceptance Criteria.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/selenium/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/selenium/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/selenium/.idea/encodings.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/selenium/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/selenium/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/selenium/pom.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/selenium/src/main/java/com/revature/Main.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/selenium/src/main/java/com/revature/pom/Demo.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/selenium/src/main/java/com/revature/pom/LoginPage.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/selenium/src/main/java/com/revature/pom/ParentPOM.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/selenium/src/main/java/com/revature/pom/PlanetariumRegistrationPage.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/selenium/src/main/java/com/revature/pom/WikiPage.java" beforeDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 6
+}</component>
+  <component name="ProjectId" id="2vzzMLGL7wGacsvoOtZndWhDqY9" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/Tremayne Miller/Desktop/JWAMillerProject1&quot;
+  }
+}</component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="60581690-3329-4c25-b78e-439112679444" name="Changes" comment="" />
+      <created>1745162641196</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1745162641196</updated>
+    </task>
+    <servers />
+  </component>
+</project>

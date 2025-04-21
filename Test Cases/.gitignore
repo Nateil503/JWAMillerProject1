@@ -1,13 +1,13 @@
-target/
+../Test Cases/target/
 !.mvn/wrapper/maven-wrapper.jar
 !**/src/main/**/target/
 !**/src/test/**/target/
 
 ### IntelliJ IDEA ###
-.idea/modules.xml
-.idea/jarRepositories.xml
-.idea/compiler.xml
-.idea/libraries/
+../Test Cases/.idea/modules.xml
+../Test Cases/.idea/jarRepositories.xml
+../Test Cases/.idea/compiler.xml
+../Test Cases/.idea/libraries/
 *.iws
 *.iml
 *.ipr
