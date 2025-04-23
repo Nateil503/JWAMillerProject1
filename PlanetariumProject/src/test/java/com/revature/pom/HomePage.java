@@ -9,11 +9,15 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.devtools.v133.page.Page;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
+import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
 import java.io.File;
 import java.time.Duration;
+import java.util.concurrent.TimeoutException;
+
+import static com.revature.TestRunner.*;
 
 public class HomePage extends ParentPOM {
 
@@ -25,15 +29,13 @@ public class HomePage extends ParentPOM {
     private WebElement moonInput;
     @FindBy(id = "orbitedPlanetInput")
     private WebElement parentPlanet;
-    @FindBy(tagName = "<tr>")
-    private WebElement planetContainer;
-    @FindBy(id = "moon-container")
-    private WebElement moonContainer;
+    @FindBy(id = "celestialTable")
+    private WebElement celestialTable;
     @FindBy(id = "locationSelect")
     private WebElement optionDropdown;
     @FindBy(id = "attach-button")
     private WebElement attachButton;
-    @FindBy(id = "SubmitButton")
+    @FindBy(id = "submit-button")
     private WebElement submitButton;
     @FindBy(id = "delete-button")
     private WebElement deleteButton;
@@ -82,29 +84,20 @@ public class HomePage extends ParentPOM {
         return title;
     }
 
-    public void setMoonContainer(WebElement moonContainer) {
-        this.moonContainer = moonContainer;
+    public boolean arePlanetsAndMoonsVisible() {
+        WebDriverWait  wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+        WebElement celestialTable = wait.until(ExpectedConditions.visibilityOfElementLocated(By.id("celestialTable")));
+        return celestialTable.isDisplayed();
     }
-
-    public void setPlanetContainer(WebElement planetContainer) {
-        this.planetContainer = planetContainer;
-    }
-
-    public boolean arePlanetsVisible() {
-        return planetContainer.isDisplayed();
-    }
-
-    public boolean areMoonsVisible() {
-        return moonContainer.isDisplayed();
-    }
-
 
     public void uploadFile(String filePath) {
         fileUploadInput.sendKeys(filePath);
     }
 
     public void enterPlanetID(String planetID) {
+        homePage.enterPlanetID(planetID);
     }
+
 }
 
 

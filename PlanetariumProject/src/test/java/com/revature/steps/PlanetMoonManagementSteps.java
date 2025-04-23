@@ -16,12 +16,12 @@ public class PlanetMoonManagementSteps {
 
     @When("the user planets are visible")
     public void the_user_planets_are_visible() {
-        Assert.assertTrue(homePage.arePlanetsVisible());
+        Assert.assertTrue(homePage.arePlanetsAndMoonsVisible());
     }
 
     @When("the user moons are visible")
     public void the_user_moons_are_visible() {
-        Assert.assertTrue(homePage.areMoonsVisible());
+        Assert.assertTrue(homePage.arePlanetsAndMoonsVisible());
     }
 
     @When("the user provides planet name {string}")
@@ -35,9 +35,8 @@ public class PlanetMoonManagementSteps {
     }
 
     @When("the user selects {string} from the dropdown")
-    public void the_user_selects_from_the_planet_dropdown(String planetID, String moonID) {
-        homePage.selectOptionFromDropdown(planetID);
-        homePage.selectOptionFromDropdown(moonID);
+    public void the_user_selects_from_the_planet_dropdown(String type) {
+        homePage.selectOptionFromDropdown(type);
     }
 
     @When("the user provides parent planet")
