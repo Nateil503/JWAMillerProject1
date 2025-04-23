@@ -5,7 +5,34 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="60581690-3329-4c25-b78e-439112679444" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/Test Cases/src/test/java/com/revature/steps/SimpleFeatureSteps.java" beforeDir="false" />
+      <change afterPath="$PROJECT_DIR$/PlanetariumProject/src/test/resources/features/PlanetMoonRemoval.feature" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Test Cases/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/PlanetariumProject/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Test Cases/.idea/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/PlanetariumProject/.idea/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Test Cases/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/PlanetariumProject/.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Test Cases/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/PlanetariumProject/.idea/encodings.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Test Cases/.idea/jarRepositories.xml" beforeDir="false" afterPath="$PROJECT_DIR$/PlanetariumProject/.idea/jarRepositories.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Test Cases/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/PlanetariumProject/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Test Cases/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/PlanetariumProject/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Test Cases/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/PlanetariumProject/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Test Cases/src/main/java/com/revature/Main.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Test Cases/src/test/java/com/revature/TestMain.java" beforeDir="false" afterPath="$PROJECT_DIR$/PlanetariumProject/src/test/java/com/revature/TestMain.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Test Cases/src/test/java/com/revature/TestRunner.java" beforeDir="false" afterPath="$PROJECT_DIR$/PlanetariumProject/src/test/java/com/revature/TestRunner.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Test Cases/src/test/java/com/revature/pom/Demo.java" beforeDir="false" afterPath="$PROJECT_DIR$/PlanetariumProject/src/test/java/com/revature/pom/Demo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Test Cases/src/test/java/com/revature/pom/HomePage.java" beforeDir="false" afterPath="$PROJECT_DIR$/PlanetariumProject/src/test/java/com/revature/pom/HomePage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Test Cases/src/test/java/com/revature/pom/LoginPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/PlanetariumProject/src/test/java/com/revature/pom/LoginPage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Test Cases/src/test/java/com/revature/pom/ParentPOM.java" beforeDir="false" afterPath="$PROJECT_DIR$/PlanetariumProject/src/test/java/com/revature/pom/ParentPOM.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Test Cases/src/test/java/com/revature/pom/RegistrationPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/PlanetariumProject/src/test/java/com/revature/pom/RegistrationPage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Test Cases/src/test/java/com/revature/steps/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/PlanetariumProject/src/test/java/com/revature/steps/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Test Cases/src/test/java/com/revature/steps/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/PlanetariumProject/src/test/java/com/revature/steps/.idea/modules.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Test Cases/src/test/java/com/revature/steps/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/PlanetariumProject/src/test/java/com/revature/steps/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Test Cases/src/test/java/com/revature/steps/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/PlanetariumProject/src/test/java/com/revature/steps/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Test Cases/src/test/java/com/revature/steps/CucumberHooks.java" beforeDir="false" afterPath="$PROJECT_DIR$/PlanetariumProject/src/test/java/com/revature/steps/CucumberHooks.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Test Cases/src/test/java/com/revature/steps/RegistrationSteps.java" beforeDir="false" afterPath="$PROJECT_DIR$/PlanetariumProject/src/test/java/com/revature/steps/RegistrationSteps.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Test Cases/src/test/resources/features/PlanetMoonAddition.feature" beforeDir="false" afterPath="$PROJECT_DIR$/PlanetariumProject/src/test/resources/features/PlanetMoonAddition.feature" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Test Cases/src/test/resources/features/PlanetMoonRemoval.feature" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Test Cases/src/test/resources/features/Registration.feature" beforeDir="false" afterPath="$PROJECT_DIR$/PlanetariumProject/src/test/resources/features/Registration.feature" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Test Cases/src/test/resources/features/SecureAccess.feature" beforeDir="false" afterPath="$PROJECT_DIR$/PlanetariumProject/src/test/resources/features/SecureAccess.feature" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -30,7 +57,7 @@
     "git-widget-placeholder": "main",
     "ignore.virus.scanning.warn.message": "true",
     "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "C:/Users/Tremayne Miller/Desktop/JWAMillerProject1",
+    "last_opened_file_path": "C:/Users/Tremayne Miller/Desktop/JWAMillerProject1/PlanetariumProject",
     "settings.editor.selected.configurable": "preferences.pluginManager"
   }
 }]]></component>
