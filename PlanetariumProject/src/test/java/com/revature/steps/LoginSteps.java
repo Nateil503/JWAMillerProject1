@@ -11,7 +11,7 @@ import static com.revature.TestRunner.*;
 
 public class LoginSteps {
 
-    @When("the user provides username {string} while logging in")
+    @Given("the user provides username {string} while logging in")
     public void the_user_provides_username(String username) {
         loginPage.enterUsername(username);
     }

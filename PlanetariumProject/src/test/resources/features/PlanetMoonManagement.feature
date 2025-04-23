@@ -1,37 +1,32 @@
 Feature: Planet & Moon Removal
 
-  Scenario: The user is able to add and remove Planets & Moons
+  Scenario: The user is able to view Planets & Moons
     Given   the user is on the home page
-    When    the user clicks the add button
-    When    the user provides planet name "Ketzar"
+    Then    the user planets are visible
+    And     the user moons are visible
+
+  Scenario: The user adds a new planet and moon
+    Given   the user is on the home page
+    When    the user selects "Planet" from the dropdown
+    And     the user provides planet name "Ketzar"
+    When    the user clicks the submit "planet" button
+    Then    the user should be redirected to the home page.
+    When    the user selects "Moon" from the dropdown
+    When    the user provides moon name "Khonsu"
+    And     the user provides valid Orbited Planet ID
+    And     the user clicks the submit "moon" button
     Then    the user should be redirected to the home page.
 
-  Scenario: The user adds their first moon
-    Given   the user is on the home page
-    When    the user clicks the add button
-    And     the user provides moon name "Khonsu"
-    When    the user selects "Ketzar" from the planet dropdown
-    And     the user attaches the moon "Khonsu" to the planet "Ketzar"
-    Then    the user should be redirected to the home page.
-
-  Scenario: The user is unable to add a planet
-    Given   the user is on the home page
-    When    the user clicks the add button
-    When    the user provides planet name "<planetID>"
-    And     the user provides invalid file type
-    When    the user selects "Ketzar" from the planet dropdown
-    And     the user attaches the moon "Khonsu" to the planet "Ketzar"
-    Then    the user should be redirected to the home page.
-
-  Scenario: The user is able to manage their Planets & Moons
+  Scenario: The user is able to remove their Planets & Moons
     Given   the user is on the home page
     When    the user planets are visible
     And     the user moons are visible
-    When    the user provides planet name "Ketzar"
+    When    the user selects "Planet" from the dropdown
+    And     the user provides planet name "Ketzar"
+    And     the user clicks the submit "Planet" button
+    When    the user selects "Moon" from the dropdown
     And     the user provides moon name "Khonsu"
-    And     the user provides valid file type
-    And     the user clicks the add button
-    Then    an alert should appear saying "<name> added successfully"
+    And     the user clicks the submit "Moon" button
     And     the user should be redirected to the home page.
 
 
@@ -39,21 +34,19 @@ Feature: Planet & Moon Removal
     Given   the user is on the home page
     When    the user planets are visible
     And     the user moons are visible
-    When    the user clicks the Manage button for the planet "<moonID>"
-    And     the user clicks the Manage button for the moon "<planetID>"
-    When    the user provides planet name "<planetID>"
-    And     the user provides moon name "<moonID>"
-    And     the user provides invalid "<filetype>"
-    When    the user clicks the add button
-    When    the user clicks the remove button
-    Then    an alert should appear saying "Invalid Planet/Moon"
+    When    the user selects "Planet" from the dropdown
+    And     the user provides planet name "<planetName>"
+    When    the user selects "<Moon>" from the dropdown
+    And     the user provides moon name "<moonName>"
+    When    the user provides invalid "<filetype>"
+    When    the user clicks the delete button
     Then    an alert should appear saying "<message>"
     And     the user should be redirected to the home page.
 
 
 # This allows for Cucumber to run through each test case
     Examples:
-      |planetID  | moonID | filetype      |   message        |
+      |planetName| moonName| filetype      |   message        |
       | Ketzar   | Luna   |   .JPEG       |Invalid moon name|
       | Ketzar   | Luna   |    .JPEG      |Invalid moon name|
       | Ketzar   | Luna   |   .JPEG       |Invalid moon name|

@@ -12,30 +12,31 @@ import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
+import java.io.File;
 import java.time.Duration;
 
 public class HomePage extends ParentPOM {
 
     private WebDriverWait alertWait;
 
-    @FindBy(id = "planetInput")
+    @FindBy(id = "planetNameInput")
     private WebElement planetInput;
-    @FindBy(id = "moonInput")
+    @FindBy(id = "moonNameInput")
     private WebElement moonInput;
-    @FindBy(id = "planet-container")
+    @FindBy(id = "orbitedPlanetInput")
+    private WebElement parentPlanet;
+    @FindBy(tagName = "<tr>")
     private WebElement planetContainer;
     @FindBy(id = "moon-container")
     private WebElement moonContainer;
-    @FindBy(id = "planet-selector")
-    private WebElement planetDropdown;
+    @FindBy(id = "locationSelect")
+    private WebElement optionDropdown;
     @FindBy(id = "attach-button")
     private WebElement attachButton;
-    @FindBy(id = "add-button")
-    private WebElement addButton;
-    @FindBy(id = "manage-button")
-    private WebElement manageButton;
-    @FindBy(id = "remove-button")
-    private WebElement removeButton;
+    @FindBy(id = "SubmitButton")
+    private WebElement submitButton;
+    @FindBy(id = "delete-button")
+    private WebElement deleteButton;
     @FindBy(id = "file-upload")
     private WebElement fileUploadInput;
 
@@ -49,39 +50,31 @@ public class HomePage extends ParentPOM {
         PageFactory.initElements(driver, this);
     }
 
-    public void attachMoonToPlanet(String moonName, String planetName) {
-        Select selectPlanet = new Select(planetDropdown);
-        selectPlanet.selectByVisibleText(planetName);
-        moonInput.clear();
-        moonInput.sendKeys(moonName);
-        attachButton.click();
-    }
-
-    public void selectPlanetFromDropdown(String planetName) {
-        Select dropdown = new Select(planetDropdown);
-        dropdown.selectByVisibleText(planetName);
+    public void selectOptionFromDropdown(String type) {
+        Select dropdown = new Select(optionDropdown);
+        dropdown.selectByVisibleText(type);
     }
 
     public void goToHomePage() {
         driver.get(url);
     }
 
-    public void enterPlanetName(String planetID) {
+    public void enterPlanetName(String planetName) {
         planetInput.clear();
-        planetInput.sendKeys(planetID);
+        planetInput.sendKeys(planetName);
     }
 
-    public void enterMoonName(String moonID) {
+    public void enterMoonName(String moonName) {
         moonInput.clear();
-        moonInput.sendKeys(moonID);
+        moonInput.sendKeys(moonName);
     }
 
-    public void clickAddButton() {
-        addButton.click();
+    public void clickSubmitButton() {
+        submitButton.click();
     }
-    
-    public void clickRemoveButton(){
-        removeButton.click();
+
+    public void clickDeleteButton(){
+        deleteButton.click();
     }
     // can use this to validate we have returned to the login page after a successful registration
 
@@ -105,18 +98,12 @@ public class HomePage extends ParentPOM {
         return moonContainer.isDisplayed();
     }
 
-    public void clickManageButtonFor(String type, String name){
-        String xpath = String.format( "//div[contains(@class, '%s') and @data-name='%s']//button[contains(@class, 'manage-btn')]",
-                type.toLowerCase(), name);
-        try{
-            WebElement manageButton = driver.findElement(By.xpath(xpath));
-            manageButton.click();
-        } catch (NoSuchElementException e) {
-            throw new RuntimeException("Manage button not found for " + type + "'" + name + "'");
-        }
-}
 
-    public void uploadFile(String s, String s1, String s2) {
+    public void uploadFile(String filePath) {
+        fileUploadInput.sendKeys(filePath);
+    }
+
+    public void enterPlanetID(String planetID) {
     }
 }
 
