@@ -45,10 +45,10 @@ public class TestRunner {
     public static void setup(){
         // here we initialize the resources and perform any other setup configurations
         driver = new ChromeDriver();
-        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(1));
+        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(2));
         loginPage = new LoginPage(driver,"Planetarium Login");
         registrationPage = new RegistrationPage(driver, "Account Creation");
-        homePage = new HomePage(driver, "Planetarium Dashboard");
+        homePage = new HomePage(driver, "Home");
 
     }
 

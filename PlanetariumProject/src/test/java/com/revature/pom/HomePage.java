@@ -1,21 +1,13 @@
 package com.revature.pom;
 
-import io.cucumber.java.mk_latn.No;
-import org.openqa.selenium.By;
-import org.openqa.selenium.NoSuchElementException;
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
-import org.openqa.selenium.chrome.ChromeDriver;
-import org.openqa.selenium.devtools.v133.page.Page;
+import org.openqa.selenium.*;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
-import java.io.File;
 import java.time.Duration;
-import java.util.concurrent.TimeoutException;
 
 import static com.revature.TestRunner.*;
 
@@ -25,22 +17,27 @@ public class HomePage extends ParentPOM {
 
     @FindBy(id = "planetNameInput")
     private WebElement planetInput;
+    @FindBy(id = "planetImageInput")
+    private WebElement planetImageInput;
+    @FindBy(id = "moonImageInput")
+    private WebElement moonImageInput;
     @FindBy(id = "moonNameInput")
     private WebElement moonInput;
     @FindBy(id = "orbitedPlanetInput")
     private WebElement parentPlanet;
-    @FindBy(id = "celestialTable")
+
+    @FindBy(xpath = "//table[@id='celestialTable']")
     private WebElement celestialTable;
     @FindBy(id = "locationSelect")
     private WebElement optionDropdown;
     @FindBy(id = "attach-button")
     private WebElement attachButton;
-    @FindBy(id = "submit-button")
+    @FindBy(className = "submit-button")
     private WebElement submitButton;
-    @FindBy(id = "delete-button")
+    @FindBy(id = "deleteButton")
     private WebElement deleteButton;
-    @FindBy(id = "file-upload")
-    private WebElement fileUploadInput;
+    @FindBy(id = "greeting")
+    private WebElement greeting;
 
 
     // note: make this a reference to your login page
@@ -48,17 +45,27 @@ public class HomePage extends ParentPOM {
 
     public HomePage(WebDriver driver, String title) {
         super(driver, title);
-        alertWait = new WebDriverWait(driver, Duration.ofSeconds(1));
+        alertWait = new WebDriverWait(driver, Duration.ofSeconds(5));
         PageFactory.initElements(driver, this);
     }
 
     public void selectOptionFromDropdown(String type) {
+        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(5));
+        wait.until(ExpectedConditions.presenceOfAllElementsLocatedBy(By.id("locationSelect")));
+        wait.until(ExpectedConditions.visibilityOf(optionDropdown));
+        wait.until(ExpectedConditions.elementToBeClickable(optionDropdown));
+
         Select dropdown = new Select(optionDropdown);
         dropdown.selectByVisibleText(type);
     }
 
     public void goToHomePage() {
         driver.get(url);
+    }
+
+    public String getGreetingText() {
+        return greeting.getText();
+
     }
 
     public void enterPlanetName(String planetName) {
@@ -75,7 +82,7 @@ public class HomePage extends ParentPOM {
         submitButton.click();
     }
 
-    public void clickDeleteButton(){
+    public void clickDeleteButton() {
         deleteButton.click();
     }
     // can use this to validate we have returned to the login page after a successful registration
@@ -85,19 +92,47 @@ public class HomePage extends ParentPOM {
     }
 
     public boolean arePlanetsAndMoonsVisible() {
-        WebDriverWait  wait = new WebDriverWait(driver, Duration.ofSeconds(10));
-        WebElement celestialTable = wait.until(ExpectedConditions.visibilityOfElementLocated(By.id("celestialTable")));
-        return celestialTable.isDisplayed();
+        try {
+        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+        wait.until(ExpectedConditions.visibilityOf(celestialTable));
+
+        if (celestialTable.isDisplayed()) {
+            System.out.println("Celestial table is visible.");
+            return true;
+        } else {
+            System.out.println("Celestial table is not visible, potential defect.");
+            return false;
+        }
+    }catch (TimeoutException | NoSuchElementException e){
+                System.out.println("Celestial table not visible:" + e.getMessage());
+                return false;
+            }
+
     }
 
-    public void uploadFile(String filePath) {
-        fileUploadInput.sendKeys(filePath);
-    }
+        public void uploadFile (String file){
+            if (!(file.endsWith(".png") || file.endsWith(".jpeg"))) {
+                throw new IllegalArgumentException("Invalid file type: " + file);
+            }
+            Select dropdown = new Select(optionDropdown);
+            String selected = dropdown.getFirstSelectedOption().getText().toLowerCase();
 
-    public void enterPlanetID(String planetID) {
-        homePage.enterPlanetID(planetID);
-    }
+            if (selected.contains("planet")) {
+                planetImageInput.sendKeys(file);
+            } else if (selected.contains("moon")) {
+                moonImageInput.sendKeys(file);
+            }
+        }
 
+        public void enterPlanetID (String planetID){
+            parentPlanet.clear();
+            parentPlanet.sendKeys(planetID);
+        }
+
+    public void waitForAlert() {
+        alertWait.until(ExpectedConditions.alertIsPresent());
+
+    }
 }
 
 

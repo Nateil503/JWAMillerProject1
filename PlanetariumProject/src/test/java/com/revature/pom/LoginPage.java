@@ -8,7 +8,7 @@ public class LoginPage extends ParentPOM {
 
     // note: make this a reference to your login page
     private String url = String.format("http://%s/", System.getenv("PLANETARIUM_URL"));
-    @FindBy(xpath = "//input[4]")
+    @FindBy(xpath = "//input[3]")
     private WebElement loginButton;
     @FindBy(id = "usernameBar")
     private WebElement usernameBar;
