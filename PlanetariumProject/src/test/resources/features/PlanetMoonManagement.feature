@@ -46,7 +46,7 @@ Feature: Planet & Moon Removal
     Examples:
       |planetName|moonName|  filetype     |   message         |
       | Pluto    | Luna   |   .jpeg       |Invalid planet name|
-      | Ketzar   | Luna   |   .png        |Invalid moon name  |
+      | Ketzar   | Leo    |   .png        |Invalid moon name  |
       | Ketzar   | Khonsu |   .gif        |Invalid file type  |
       | Ketzar   | Khonsu |   .tiff       |Invalid file type  |
       | Ketzar   | Khonsu |   .bmp        |Invalid file type  |
