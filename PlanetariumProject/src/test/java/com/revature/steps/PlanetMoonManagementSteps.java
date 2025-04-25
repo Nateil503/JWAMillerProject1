@@ -35,13 +35,13 @@ public class PlanetMoonManagementSteps {
     }
 
     @When("the user provides planet name {string}")
-    public void the_user_provides_planet_name(String planetID) {
-        homePage.enterPlanetName(planetID);
+    public void the_user_provides_planet_name(String planetName) {
+        homePage.enterPlanetName(planetName);
     }
 
     @When("the user provides moon name {string}")
-    public void the_user_provides_moon_name(String moonID) {
-        homePage.enterMoonName(moonID);
+    public void the_user_provides_moon_name(String moonName) {
+        homePage.enterMoonName(moonName);
     }
 
     @When("the user selects {string} from the dropdown")
@@ -49,10 +49,6 @@ public class PlanetMoonManagementSteps {
         homePage.selectOptionFromDropdown(type);
     }
 
-    @When("the user provides parent planet")
-    public void the_user_provides_parent_planet(String planetID){
-        homePage.enterPlanetID(planetID);
-    }
 
     @When("the user clicks the submit button")
     public void the_user_clicks_the_submit_button() {

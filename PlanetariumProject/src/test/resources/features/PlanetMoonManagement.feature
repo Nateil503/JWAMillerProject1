@@ -23,14 +23,13 @@ Feature: Planet & Moon Removal
     And     the user moons are visible
     When    the user selects "Planet" from the dropdown
     And     the user provides planet name "Ketzar"
-    And     the user clicks the submit button
     When    the user selects "Moon" from the dropdown
     And     the user provides moon name "Khonsu"
     And     the user clicks the delete button
     And     the user should be redirected to the home page.
 
 
-  Scenario Outline: User is unable to add or remove Planets & Moons to update findings
+  Scenario Outline: User is unable to add new Planets and Moons to update findings
     Given   the user is on the home page
     When    the user planets are visible
     And     the user moons are visible
