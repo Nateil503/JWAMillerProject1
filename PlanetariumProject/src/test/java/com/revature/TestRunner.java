@@ -1,5 +1,6 @@
 package com.revature;
 
+
 import com.revature.pom.HomePage;
 import com.revature.pom.LoginPage;
 import com.revature.pom.RegistrationPage;
@@ -29,7 +30,7 @@ import java.time.Duration;
  */
 @RunWith(Cucumber.class)
 @CucumberOptions(
-        features = "classpath:features/",
+        features = "classpath:NewFeatures/",
         glue = "com.revature.steps",
         plugin = {"pretty","html:src/test/resources/reports/Cucumber-Report.html"}
 )
@@ -41,6 +42,7 @@ public class TestRunner {
     public static RegistrationPage registrationPage;
     public static HomePage homePage;
 
+
     @BeforeClass
     public static void setup(){
         // here we initialize the resources and perform any other setup configurations
@@ -48,7 +50,7 @@ public class TestRunner {
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(2));
         loginPage = new LoginPage(driver,"Planetarium Login");
         registrationPage = new RegistrationPage(driver, "Account Creation");
-        homePage = new HomePage(driver, "Home");
+
 
     }
 

@@ -1,5 +1,6 @@
 package com.revature.steps;
 
+import com.revature.pom.HomePage;
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
@@ -13,7 +14,10 @@ import java.time.Duration;
 
 import static com.revature.TestRunner.*;
 
+
 public class LoginSteps {
+
+    // SHARED STEPS
 
     @Given("the user provides username {string} while logging in")
     public void the_user_provides_username(String username) {
@@ -30,6 +34,9 @@ public class LoginSteps {
         loginPage.clickLoginButton();
     }
 
+
+    // HAPPY PATH STEPS
+
     @And("the user should be redirected to the home page.")
     public void the_user_should_be_redirected_to_the_home_page() {
         WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(5));
@@ -41,15 +48,19 @@ public class LoginSteps {
             // No alert found, continue with test
         }
         Assert.assertEquals("Home",driver.getTitle());
-    }
 
-    @Then("the user should remain on the login page")
-    public void the_user_should_remain_on_the_login_page() {
-        Assert.assertEquals(loginPage.getTitle(),driver.getTitle());
+        homePage = new HomePage(driver, "Home");
     }
 
     @Then("a personalized greeting should appear saying {string}")
     public void a_personalized_greeting_should_appear_saying(String expectedMessage) {
-       Assert.assertEquals(expectedMessage, homePage.getGreetingText());
+        Assert.assertEquals(expectedMessage, homePage.getGreetingText());
+    }
+
+    // SAD PATH STEPS //
+
+    @Then("the user should remain on the login page")
+    public void the_user_should_remain_on_the_login_page() {
+        Assert.assertEquals(loginPage.getTitle(),driver.getTitle());
     }
 }
