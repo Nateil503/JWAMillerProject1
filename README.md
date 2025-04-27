@@ -51,8 +51,8 @@ Once you have your Feature files and your Step Definition Classes, you can move 
 Now that we have all of this information and compiled into its respective files. We can run tests. 
 
     -- Configure a test runner, for this one we used JUnit, and make sure that you are linking your 
-    Features, Glue Steps, and html file (optional) into the dedicated configuration inputs to ensure 
-    that the test runner is pulling information from the right locations in order to fully run the tests. 
+        Features, Glue Steps, and html file (optional) into the dedicated configuration inputs to ensure 
+        that the test runner is pulling information from the right locations in order to fully run the tests. 
 
 After running the tests, we now can determine whether there are any defects within the application and if there are, what are the priority and severity levels of fixing that defect. 
 
