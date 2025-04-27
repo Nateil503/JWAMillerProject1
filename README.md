@@ -76,8 +76,8 @@ A more methodical and step-by-step approach will improve consistency and ensure 
 
 ### Future Improvements
 
-Moving forward, I will be integrating the use of Jira to maintain a more active and accurate workflow. I will regularly update the Jira and implement frequent progress checks as that will help ensure I stay up to date with timelines and deadlines.
-Also, I plan to improve the structure of test cases by separating them based on their specific goals and requirements. Rather than grouping multiple user stories together due to step similarities, each will be treated as an individual test case. This separation will enhance clarity, maintain focus, allow for better pacing, and limit any redundancy or overlap in code to prevent errors and support better debugging and documentation.
+Moving forward, I will be putting Jira to use in order to maintain a more active and accurate workflow. I will regularly update the Jira and implement frequent progress checks as that will help ensure I stay up to date with timelines and deadlines.
+Also, I plan to improve the structure of my test cases by separating them based on their specific goals and requirements. Rather than grouping multiple user stories together due to step similarities, I will treat each as an individual test case. This separation will enhance clarity, maintain focus, allow for better pacing, and limit any redundancy or overlap in code to prevent errors and support better debugging and documentation.
 
 ### Conclusion
 
