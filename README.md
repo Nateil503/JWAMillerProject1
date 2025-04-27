@@ -57,7 +57,7 @@ Now that we have all of this information and compiled into its respective files.
 After running the tests, we now can determine whether there are any defects within the application and if there are, what are the priority and severity levels of fixing that defect. 
 
 
-# Formal Sprint Retrospective
+# Formal Sprint Retrospective :partying_face:	
 
 ### Overview
 
